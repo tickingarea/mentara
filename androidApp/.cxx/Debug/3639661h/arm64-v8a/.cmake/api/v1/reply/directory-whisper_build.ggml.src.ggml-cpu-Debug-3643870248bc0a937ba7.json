@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "whisper_build/ggml/src/ggml-cpu",
+		"source" : "C:/Users/Administrator/Documents/Default Project/learnagent/whisper-src/whisper.cpp-master/ggml/src/ggml-cpu"
+	}
+}

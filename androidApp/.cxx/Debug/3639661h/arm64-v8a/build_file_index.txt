@@ -1,0 +1,6 @@
+C:\Users\Administrator\Documents\Default Project\learnagent\androidApp\src\main\cpp\CMakeLists.txt
+C:\Users\Administrator\Documents\Default Project\learnagent\whisper-src\whisper.cpp-master\CMakeLists.txt
+C:\Users\Administrator\Documents\Default Project\learnagent\whisper-src\whisper.cpp-master\ggml\CMakeLists.txt
+C:\Users\Administrator\Documents\Default Project\learnagent\whisper-src\whisper.cpp-master\ggml\src\CMakeLists.txt
+C:\Users\Administrator\Documents\Default Project\learnagent\whisper-src\whisper.cpp-master\ggml\src\ggml-cpu\CMakeLists.txt
+C:\Users\Administrator\Documents\Default Project\learnagent\whisper-src\whisper.cpp-master\src\CMakeLists.txt

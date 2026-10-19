@@ -1,0 +1,22 @@
+cmake_minimum_required(VERSION 3.18.1)
+
+project("whisper_test")
+
+# 添加 C 标准和编译选项
+set(CMAKE_C_STANDARD 11)
+set(CMAKE_C_STANDARD_REQUIRED ON)
+
+# Android NDK 设置
+if(ANDROID)
+    add_compile_definitions(ANDROID=1)
+endif()
+
+# 创建 JNI 接口库
+add_library(whisper_jni_test SHARED
+    jni_whisper_test.cpp
+)
+
+target_link_libraries(whisper_jni_test
+    android
+    log
+)

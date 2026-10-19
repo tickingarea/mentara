@@ -1,0 +1,6 @@
+# Sample video file for testing
+# This is a placeholder for the actual test video file
+# In a real implementation, this would be a actual video file with audio
+# Format: MP4 with AAC audio track
+# Duration: ~30 seconds
+# Size: ~10MB

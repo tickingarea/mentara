@@ -1,0 +1,10 @@
+prefix=C:/Program Files (x86)/mentara_whisper
+exec_prefix=${prefix}
+libdir=C:/Program Files (x86)/mentara_whisper/lib
+includedir=C:/Program Files (x86)/mentara_whisper/include
+
+Name: whisper
+Description: Port of OpenAI's Whisper model in C/C++
+Version: 1.9.5-dev
+Libs: -L${libdir} -lggml  -lggml-base -lwhisper
+Cflags: -I${includedir}

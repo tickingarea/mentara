@@ -1,0 +1,220 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.6.0"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						5
+					]
+				},
+				{
+					"build" : "whisper_build",
+					"childIndexes" : 
+					[
+						2,
+						5
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-whisper_build-Debug-d4bdc86aecb399c78ede.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "C:/Users/Administrator/Documents/Default Project/learnagent/whisper-src/whisper.cpp-master"
+				},
+				{
+					"build" : "whisper_build/ggml",
+					"childIndexes" : 
+					[
+						3
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-whisper_build.ggml-Debug-bd3cf76ad162cb4cf505.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.14"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 2,
+					"source" : "C:/Users/Administrator/Documents/Default Project/learnagent/whisper-src/whisper.cpp-master/ggml"
+				},
+				{
+					"build" : "whisper_build/ggml/src",
+					"childIndexes" : 
+					[
+						4
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-whisper_build.ggml.src-Debug-1fb2deee67f206b3586d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.14"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 2,
+					"source" : "C:/Users/Administrator/Documents/Default Project/learnagent/whisper-src/whisper.cpp-master/ggml/src",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				},
+				{
+					"build" : "whisper_build/ggml/src/ggml-cpu",
+					"jsonFile" : "directory-whisper_build.ggml.src.ggml-cpu-Debug-3643870248bc0a937ba7.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.14"
+					},
+					"parentIndex" : 3,
+					"projectIndex" : 2,
+					"source" : "C:/Users/Administrator/Documents/Default Project/learnagent/whisper-src/whisper.cpp-master/ggml/src/ggml-cpu"
+				},
+				{
+					"build" : "whisper_build/src",
+					"jsonFile" : "directory-whisper_build.src-Debug-04624a47d91de4e8e084.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "C:/Users/Administrator/Documents/Default Project/learnagent/whisper-src/whisper.cpp-master/src",
+					"targetIndexes" : 
+					[
+						3,
+						4
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "mentara_whisper",
+					"targetIndexes" : 
+					[
+						5
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						2
+					],
+					"directoryIndexes" : 
+					[
+						1,
+						5
+					],
+					"name" : "whisper.cpp",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						3,
+						4
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2,
+						3,
+						4
+					],
+					"name" : "ggml",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 3,
+					"id" : "ggml::@5269f1b97cda40933ce6",
+					"jsonFile" : "target-ggml-Debug-e1b3c6d5ef2212cb87cf.json",
+					"name" : "ggml",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "ggml-base::@5269f1b97cda40933ce6",
+					"jsonFile" : "target-ggml-base-Debug-fd95c7650bd6ffb292b5.json",
+					"name" : "ggml-base",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "ggml-cpu::@5269f1b97cda40933ce6",
+					"jsonFile" : "target-ggml-cpu-Debug-4bcf475c423bd2deec76.json",
+					"name" : "ggml-cpu",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "parakeet::@3f51764ce60803f140ba",
+					"jsonFile" : "target-parakeet-Debug-0723da0f38627801619b.json",
+					"name" : "parakeet",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "whisper::@3f51764ce60803f140ba",
+					"jsonFile" : "target-whisper-Debug-f5b145cafb1db41ea694.json",
+					"name" : "whisper",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "whisperjni::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-whisperjni-Debug-3c930fa4ac965022bdd6.json",
+					"name" : "whisperjni",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/Administrator/Documents/Default Project/learnagent/androidApp/.cxx/Debug/575n4c1e/arm64-v8a",
+		"source" : "C:/Users/Administrator/Documents/Default Project/learnagent/androidApp/src/main/cpp"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

@@ -1,0 +1,24 @@
+{
+  "cases": [
+    { "question": "梯度下降", "expect": "梯度下降" },
+    { "question": "反向传播", "expect": "反向传播" },
+    { "question": "卷积神经网络", "expect": "卷积神经网络" },
+    { "question": "优化算法", "expect": "优化算法" },
+    { "question": "学习率", "expect": "学习率" },
+    { "question": "图像识别", "expect": "图像识别" },
+    { "question": "负梯度", "expect": "负梯度" },
+    { "question": "基础方法", "expect": "基础方法" },
+    { "question": "CNN", "expect": "CNN" },
+    { "question": "更新参数", "expect": "更新参数" },
+    { "question": "控制步长", "expect": "控制步长" },
+    { "question": "计算梯度", "expect": "计算梯度" },
+    { "question": "处理图像", "expect": "处理图像" },
+    { "question": "这节课", "expect": "这节课" },
+    { "question": "接下来", "expect": "接下来" },
+    { "question": "最后", "expect": "最后" },
+    { "question": "步长", "expect": "步长" },
+    { "question": "参数", "expect": "参数" },
+    { "question": "量子力学", "expect": "未提及" },
+    { "question": "太阳系", "expect": "未提及" }
+  ]
+}

@@ -1,0 +1,42 @@
+# ninja log v5
+141	1658	8133298252498612	whisper_build/ggml/src/CMakeFiles/ggml-base.dir/ggml-alloc.c.o	d71d09bdf4f8b8e7
+957	1761	8133298254547434	whisper_build/ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/hbm.cpp.o	982ca6c352b740b3
+284	1870	8133298259967128	whisper_build/ggml/src/CMakeFiles/ggml-base.dir/ggml-threading.cpp.o	f3755acc29adb2c1
+2	1947	8133298261006536	CMakeFiles/whisperjni.dir/whisper_jni.cpp.o	a8df406a4676d96c
+1350	2032	8133298262285806	whisper_build/ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/tiled/tiled-kernel.cpp.o	ef0f4c239d1d551d
+193	2036	8133298262325781	whisper_build/ggml/src/CMakeFiles/ggml-base.dir/ggml.cpp.o	3616b48d164f6f9c
+44	2051	8133298262655592	whisper_build/ggml/src/CMakeFiles/ggml-base.dir/ggml.c.o	25b09100992fd185
+604	2054	8133298262675582	whisper_build/ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/ggml-cpu.c.o	6b7d1df3e614df0f
+1030	2152	8133298263724979	whisper_build/ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/quants.c.o	7cc3d940da0355de
+1873	2220	8133298264484549	whisper_build/src/CMakeFiles/whisper.dir/aneforge/whisper-aneforge.cpp.o	c0f19f669b548728
+432	2548	8133298267656619	whisper_build/ggml/src/CMakeFiles/ggml-base.dir/ggml-quants.c.o	532f55b0ad083d85
+879	2742	8133298269695455	whisper_build/ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/traits.cpp.o	bdb3706c768d43e7
+488	2791	8133298270155193	whisper_build/ggml/src/CMakeFiles/ggml.dir/ggml-backend-dl.cpp.o	9086f8d5eeaf7e6c
+1230	3095	8133298273203451	whisper_build/ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/vec.cpp.o	faed1bf8a62e9dad
+1103	3116	8133298273413332	whisper_build/ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/amx/amx.cpp.o	5d996c3ec05fe4f5
+1167	3140	8133298273693172	whisper_build/ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/amx/mmq.cpp.o	92bfb56829bf6d54
+727	3181	8133298274082962	whisper_build/ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/ggml-cpu.cpp.o	ee37476fbb0c94dc
+1662	3249	8133298274748207	whisper_build/ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/arch/arm/quants.c.o	a9f6ecde53c8b9c6
+92	3309	8133298275297892	whisper_build/ggml/src/CMakeFiles/ggml-base.dir/ggml-backend.cpp.o	71c9b3ce52deeb1f
+1552	3473	8133298277006918	whisper_build/ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/arch/arm/repack.cpp.o	c930bd223795c0f5
+337	3710	8133298279328477	whisper_build/ggml/src/CMakeFiles/ggml-base.dir/ggml-opt.cpp.o	692e63e9cf1e263d
+1411	3728	8133298279537981	whisper_build/ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/binary-ops.cpp.o	b2887ba96f216cb5
+668	3798	8133298280217595	whisper_build/ggml/src/CMakeFiles/ggml.dir/ggml-backend-reg.cpp.o	398dfe77bc765454
+1292	4148	8133298283691495	whisper_build/ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/tiled/tiled.cpp.o	3fbc9c5868108da3
+799	4344	8133298285616235	whisper_build/ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/repack.cpp.o	38ac7ed4e41ece37
+1478	4456	8133298286775572	whisper_build/ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/unary-ops.cpp.o	27569d2228eee9d9
+239	4881	8133298290900142	whisper_build/ggml/src/CMakeFiles/ggml-base.dir/ggml-backend-meta.cpp.o	77591ae0dbd1b886
+380	5265	8133298294699071	whisper_build/ggml/src/CMakeFiles/ggml-base.dir/gguf.cpp.o	3a6448599ea117f1
+1766	5416	8133298296257920	whisper_build/ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/ops.cpp.o	e2f9630c0a4cbe03
+5266	6427	8133298301655588	whisper_build/ggml/src/libggml-base.a	91a59efb9dcfb9ee
+6427	6781	8133298309527896	whisper_build/ggml/src/libggml-cpu.a	fd099bd9c04a2f2a
+6781	7126	8133298312905944	whisper_build/ggml/src/libggml.a	d638a05a18dcc45c
+1950	12638	8133298367964859	whisper_build/src/CMakeFiles/whisper.dir/whisper.cpp.o	713e89315637482e
+12639	13032	8133298371875752	whisper_build/src/libwhisper.a	50a0f22685fab3e7
+13032	13561	8133298377188482	C:/Users/Administrator/Documents/Default Project/learnagent/androidApp/build/intermediates/cxx/Debug/3639661h/obj/arm64-v8a/libwhisperjni.so	63525187db72f424
+6	1205	8133857950082345	CMakeFiles/whisperjni.dir/whisper_jni.cpp.o	a8df406a4676d96c
+1208	1785	8133857955349275	C:/Users/Administrator/Documents/Default Project/learnagent/androidApp/build/intermediates/cxx/Debug/3639661h/obj/arm64-v8a/libwhisperjni.so	63525187db72f424
+6	1129	8134013577101461	CMakeFiles/whisperjni.dir/whisper_jni.cpp.o	a8df406a4676d96c
+1131	1716	8134013582115117	C:/Users/Administrator/Documents/Default Project/learnagent/androidApp/build/intermediates/cxx/Debug/3639661h/obj/arm64-v8a/libwhisperjni.so	63525187db72f424
+7	1163	8134032754883891	CMakeFiles/whisperjni.dir/whisper_jni.cpp.o	a8df406a4676d96c
+1165	1704	8134032759796012	C:/Users/Administrator/Documents/Default Project/learnagent/androidApp/build/intermediates/cxx/Debug/3639661h/obj/arm64-v8a/libwhisperjni.so	63525187db72f424

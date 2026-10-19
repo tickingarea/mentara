@@ -1,0 +1,203 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "C:/Users/Administrator/Documents/Default Project/learnagent/androidApp/build/intermediates/cxx/Debug/3639661h/obj/arm64-v8a/libwhisperjni.so"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"target_link_libraries",
+			"target_include_directories"
+		],
+		"files" : 
+		[
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 14,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 20,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 15,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC"
+				},
+				{
+					"backtrace" : 2,
+					"fragment" : "-pthread"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 2,
+					"define" : "GGML_USE_CPU"
+				},
+				{
+					"define" : "whisperjni_EXPORTS"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/Administrator/Documents/Default Project/learnagent/androidApp/src/main/cpp/../../../../whisper-src/whisper.cpp-master/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/Administrator/Documents/Default Project/learnagent/androidApp/src/main/cpp/../../../../whisper-src/whisper.cpp-master/ggml/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "C:/Users/Administrator/Documents/Default Project/learnagent/whisper-src/whisper.cpp-master/src/."
+				},
+				{
+					"backtrace" : 2,
+					"path" : "C:/Users/Administrator/Documents/Default Project/learnagent/whisper-src/whisper.cpp-master/src/../include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "C:/Users/Administrator/Documents/Default Project/learnagent/whisper-src/whisper.cpp-master/ggml/src/../include"
+				}
+			],
+			"language" : "CXX",
+			"sourceIndexes" : 
+			[
+				0
+			],
+			"sysroot" : 
+			{
+				"path" : "C:/Android/Sdk/ndk/25.2.9519653/toolchains/llvm/prebuilt/windows-x86_64/sysroot"
+			}
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "ggml::@5269f1b97cda40933ce6"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "ggml-cpu::@5269f1b97cda40933ce6"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "ggml-base::@5269f1b97cda40933ce6"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "whisper::@3f51764ce60803f140ba"
+		}
+	],
+	"id" : "whisperjni::@6890427a1f51a3e7e1df",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "whisper_build\\src\\libwhisper.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\Android\\Sdk\\ndk\\25.2.9519653\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\lib\\aarch64-linux-android\\26\\liblog.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "whisper_build\\ggml\\src\\libggml.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "whisper_build\\ggml\\src\\libggml-cpu.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "whisper_build\\ggml\\src\\libggml-base.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lm",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-ldl",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-pthread",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-latomic -lm",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX",
+		"sysroot" : 
+		{
+			"path" : "C:/Android/Sdk/ndk/25.2.9519653/toolchains/llvm/prebuilt/windows-x86_64/sysroot"
+		}
+	},
+	"name" : "whisperjni",
+	"nameOnDisk" : "libwhisperjni.so",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "whisper_jni.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "SHARED_LIBRARY"
+}

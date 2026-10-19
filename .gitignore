@@ -1,0 +1,51 @@
+# ===== 机密 / 本地配置（绝不提交）=====
+*.env
+.env*
+local.properties
+**/keystore*
+**/*.jks
+**/*.keystore
+config.local.*
+secrets.*
+*.pem
+
+# ===== 构建产物 =====
+build/
+*/build/
+.gradle/
+.gradle-cache/
+.kotlin/
+captures/
+*.log
+v*.log
+f*.log
+logs/
+
+# ===== IDE / 系统 =====
+.idea/
+*.iml
+.vscode/
+.DS_Store
+Thumbs.db
+
+# ===== 本地工具链（体积大，不入库）=====
+gradle-dist/
+jdk-temp/
+whisper-src/
+node_modules/
+mcpServer/node_modules/
+
+# ===== 模型与大数据（>100MB，GitHub 限制）=====
+**/assets/sensevoice/
+**/models/
+*.onnx
+*.bin
+*.part
+
+# ===== 发行物 =====
+deliverable/
+*.apk
+*.aab
+*.exe
+*.msi
+desktopApp/build/compose/

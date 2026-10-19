@@ -1,0 +1,121 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Mentara — 仓库预览（离线）</title></head><body style="background:#0d1117;color:#e6edf3;font-family:Segoe UI,Microsoft YaHei,sans-serif;max-width:860px;margin:0 auto;padding:32px;line-height:1.7"><div align="center">
+
+<h1>Mentara</h1>
+
+<b>Turn any lecture video into clean, cited study notes — on mobile & desktop.</b>
+<b>把任何网课视频变成干净、可溯源的学习笔记 —— 手机 + 桌面双端。</b>
+
+<span style="display:inline-block;background:#21262d;border:1px solid #30363d;border-radius:4px;padding:3px 8px;font-size:12px;margin:2px">Build</span>
+<span style="display:inline-block;background:#21262d;border:1px solid #30363d;border-radius:4px;padding:3px 8px;font-size:12px;margin:2px">License</span>
+<span style="display:inline-block;background:#21262d;border:1px solid #30363d;border-radius:4px;padding:3px 8px;font-size:12px;margin:2px">Platform</span>
+<span style="display:inline-block;background:#21262d;border:1px solid #30363d;border-radius:4px;padding:3px 8px;font-size:12px;margin:2px">Kotlin</span>
+<span style="display:inline-block;background:#21262d;border:1px solid #30363d;border-radius:4px;padding:3px 8px;font-size:12px;margin:2px">PRs</span>
+
+</div>
+
+---
+
+<h2 style="border-bottom:1px solid #30363d;padding-bottom:6px">Demo</h2>
+
+<blockquote style="border-left:3px solid #30363d;padding-left:12px;color:#8b949e">Screenshots coming — placeholders for the first release.</blockquote>
+
+| Parse & Timeline | Debate (3 models) | Notes output |
+|:-:|:-:|:-:|
+| <img src="demo-1.png" alt="demo-1" style="max-width:48%;margin:4px;border-radius:8px;border:1px solid #30363d"> | <img src="demo-2.png" alt="demo-2" style="max-width:48%;margin:4px;border-radius:8px;border:1px solid #30363d"> | <img src="demo-3.png" alt="demo-3" style="max-width:48%;margin:4px;border-radius:8px;border:1px solid #30363d"> |
+
+---
+
+<h2 style="border-bottom:1px solid #30363d;padding-bottom:6px">Features</h2>
+
+<div>• <b>Ingest everything, everywhere</b> — Import a lecture video (mp4/mkv/…), Mentara extracts 16 kHz mono audio and slices frames on-device.</div>
+<div>• <b>1 fps + perceptual dedup</b> — Frames are compared via a 32×32 grayscale signature; ≥90 % similar frames skip OCR entirely. Slide decks stop burning your CPU.</div>
+<div>• <b>Multimodal parse pipeline</b> — Speech (SenseVoice) and screen text (ML Kit OCR) are merged into one timeline <code style="background:#21262d;padding:1px 5px;border-radius:4px">[mm:ss] speech | screen</code>.</div>
+<div>• <b>SenseVoice, offline & bundled</b> — Chinese ASR (CER ≈ 5 % class) runs fully on-device via <a href="https://github.com/k2-fsa/sherpa-onnx" style="color:#58a6ff"><code style="background:#21262d;padding:1px 5px;border-radius:4px">sherpa-onnx</code></a>. No account, no cloud, no heat.</div>
+<div>• <b>Garbage-in firewall</b> — Regex pre-filters strip OCR garbage (player overlays, <code style="background:#21262d;padding:1px 5px;border-radius:4px">TTTT</code> repeats, <code style="background:#21262d;padding:1px 5px;border-radius:4px">TRACE</code>-style noise) and ASR hallucinations (<code style="background:#21262d;padding:1px 5px;border-radius:4px">my when when when</code>) *before* any LLM sees them.</div>
+<div>• <b>Vision proofreading (see-the-picture, fix-the-words)</b> — A VLM re-reads each screenshot and corrects the OCR text against what is *actually* on screen.</div>
+<div>• <b>Consensus correction, chunked</b> — A second pass rewrites the merged transcript in 2 500-char chunks (no timeouts): typos fixed, repetition removed, Simplified-Chinese-only enforced, "no inventing" enforced.</div>
+<div>• <b>Timeline as first-class UI</b> — The video and its parsed timeline live in the same pane; tap any line to jump and keep playing.</div>
+<div>• <b>Permanent knowledge base</b> — Every parse writes <code style="background:#21262d;padding:1px 5px;border-radius:4px">skill.md</code> (full archive) + notes; later Q&A answers with *your own video* as context, across videos.</div>
+<div>• <b>3-model debate, background-proof</b> — Kimi / DeepSeek / GLM debate with per-seat fallback, phase checkmarks, elapsed timer; leaves the foreground without cancelling.</div>
+<div>• <b>Built to be left alone</b> — Foreground service + wake-lock keep long parses alive with the screen off; screen stays on during parsing if you prefer.</div>
+<div>• <b>Dual-platform, one core</b> — All domain logic lives in <code style="background:#21262d;padding:1px 5px;border-radius:4px">shared/</code> (Kotlin Multiplatform). Android and Windows are thin UI shells.</div>
+
+---
+
+<h2 style="border-bottom:1px solid #30363d;padding-bottom:6px">Architecture</h2>
+
+<pre style="background:#161b22;padding:12px;border-radius:8px;overflow:auto">shared/       Kotlin Multiplatform core — parser, ASR routing, OCR firewall,
+              merge, consensus correction, debate engine, storage contracts
+androidApp/   Jetpack Compose UI + sherpa-onnx (SenseVoice) + ML Kit OCR
+desktopApp/   Compose Desktop UI + Windows media/OCR toolchain
+</pre>
+
+<blockquote style="border-left:3px solid #30363d;padding-left:12px;color:#8b949e">Why not <code style="background:#21262d;padding:1px 5px;border-radius:4px">/android</code> and <code style="background:#21262d;padding:1px 5px;border-radius:4px">/windows</code> side-by-side folders? Because every line of</blockquote>
+<blockquote style="border-left:3px solid #30363d;padding-left:12px;color:#8b949e">domain logic is shared through KMP — duplicating it per platform would be an</blockquote>
+<blockquote style="border-left:3px solid #30363d;padding-left:12px;color:#8b949e">anti-pattern. This three-module monorepo is the industry-standard layout for</blockquote>
+<blockquote style="border-left:3px solid #30363d;padding-left:12px;color:#8b949e">dual-platform Kotlin projects.</blockquote>
+
+---
+
+<h2 style="border-bottom:1px solid #30363d;padding-bottom:6px">Build</h2>
+
+<b>Requirements</b>: JDK 17+, Android SDK (compileSdk 35), NDK 25.2+, CMake 3.22+
+
+<pre style="background:#161b22;padding:12px;border-radius:8px;overflow:auto"># 1) fetch the on-device ASR model once (~228 MB, hf-mirror)
+powershell -File scripts/fetch-sensevoice-model.ps1
+
+<h1>2) Android APK</h1>
+./gradlew :androidApp:assembleDebug
+
+<h1>3) Windows desktop</h1>
+./gradlew :desktopApp:build
+
+<h1>4) tests</h1>
+./gradlew :shared:jvmTest
+</pre>
+
+<h3>Configuration</h3>
+
+Runtime configuration (API keys, model choice) is entered <b>inside the app</b> —
+nothing is hard-coded, nothing is committed. Local machine paths live in
+<code style="background:#21262d;padding:1px 5px;border-radius:4px">local.properties</code> (git-ignored).
+
+---
+
+<h2 style="border-bottom:1px solid #30363d;padding-bottom:6px">Known Issues</h2>
+
+We ship honesty with the code:
+
+<div>• <b>OCR garbage in extreme scenes</b> — heavy subtitle burn-in, low-contrast text</div>
+  and rapid scene cuts can still yield artifacts. The regex firewall and VLM
+  proofreading reduce this heavily, but are not (yet) bulletproof.
+<div>• <b>High-concurrency parsing is limited</b> — the on-device pipeline processes one</div>
+  video at a time by design; parallel Whisper/SenseVoice long-form inference is
+  out of scope for phone-class hardware.
+<div>• <b>First-run install cost</b> — the bundled SenseVoice model adds ~210 MB to the</div>
+  APK and a one-time ~600 MB free-space requirement during install.
+<div>• <b>Long lectures are slow on low-end devices</b> — a 78-minute lecture with full</div>
+  VLM proofreading is measured in tens of minutes.
+
+<h2 style="border-bottom:1px solid #30363d;padding-bottom:6px">Roadmap</h2>
+
+<div>&#9744; Stronger garbage regex bank + per-frame UI-region detection</div>
+<div>&#9744; Obsidian plugin / vault sync (notes with <code style="background:#21262d;padding:1px 5px;border-radius:4px">[[links]]</code> and timestamps)</div>
+<div>&#9744; Abstract the dual-platform cores behind a single interface layer</div>
+<div>&#9744; Subtitle burn-in export (<code style="background:#21262d;padding:1px 5px;border-radius:4px">.srt</code> from ASR timeline)</div>
+<div>&#9744; Batch queue: learn a whole course overnight</div>
+
+---
+
+<h2 style="border-bottom:1px solid #30363d;padding-bottom:6px">Join Us</h2>
+
+<blockquote style="border-left:3px solid #30363d;padding-left:12px;color:#8b949e">I am a 17-year-old independent developer. 这是我从 0 到 1 的探索。代码可能不够完美，但双端同步的架构正在快速迭代。Issues and PRs are welcome.</blockquote>
+
+Working on something adjacent — on-device ASR, multimodal parsing, learning tools? Open an Issue. I read everything, and the code is the resume.
+
+---
+
+<h2 style="border-bottom:1px solid #30363d;padding-bottom:6px">License</h2>
+
+<a href="LICENSE" style="color:#58a6ff">MIT</a> © 2026 tickingarea
+<hr style="border-color:#30363d"><p style="color:#8b949e;font-size:12px">Mentara · 本页运行于 GitHub Pages · 仓库：github.com/tickingarea/mentara</p></body></html>

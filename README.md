@@ -119,4 +119,4 @@ Working on something adjacent — on-device ASR, multimodal parsing, learning to
 
 ## License
 
-[MIT](LICENSE) © 2026 Mentara
+[MIT](LICENSE) © 2026 tickingarea

@@ -11,7 +11,7 @@ First off — thank you. Mentara is built in the open and every Issue / PR matte
 ## Workflow
 
 ```bash
-git clone https://github.com/<your-name>/mentara.git
+git clone https://github.com/tickingarea/mentara.git
 cd mentara
 git checkout -b feat/your-feature   # or fix/… or docs/…
 ```

@@ -111,7 +111,9 @@ We ship honesty with the code:
 
 ## Join Us
 
-> I am a 17-year-old independent developer. 这是我从 0 到 1 的探索。代码可能不够完美，但双端同步的架构正在快速迭代。欢迎提 Issue，更渴望未来的合伙人能看见我。
+> I am a 17-year-old independent developer. 这是我从 0 到 1 的探索。代码可能不够完美，但双端同步的架构正在快速迭代。Issues and PRs are welcome.
+
+Working on something adjacent — on-device ASR, multimodal parsing, learning tools? Open an Issue. I read everything, and the code is the resume.
 
 ---
 

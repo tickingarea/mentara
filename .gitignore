@@ -49,3 +49,13 @@ deliverable/
 *.exe
 *.msi
 desktopApp/build/compose/
+# ===== 补充：构建中间物 / 日志 / 截图 / 开发残留 =====
+.cxx/
+**/.cxx/
+*.err
+*.bak
+shot_*.png
+ui_mentara_*.png
+perf_report.txt
+dm2_mcp_smoke.json
+opencode.json
